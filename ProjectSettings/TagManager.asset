@@ -68,3 +68,15 @@ TagManager:
   - name: character
     uniqueID: 1901171323
     locked: 0
+  - name: New Layer 10
+    uniqueID: 3526202587
+    locked: 0
+  - name: MAP UI
+    uniqueID: 1384085103
+    locked: 0
+  - name: New Layer 12
+    uniqueID: 1678574529
+    locked: 0
+  - name: SUPER UI
+    uniqueID: 3995148209
+    locked: 0
