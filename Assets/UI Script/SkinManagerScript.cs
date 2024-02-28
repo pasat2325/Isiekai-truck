@@ -6,8 +6,7 @@ using UnityEngine.UI;
 
 public class SkinManagerScript : MonoBehaviour
 {
-    [SerializeField]
-    private SkinDB skinDB;
+    private SkinDBScript SkinDB;
     public string selectedName;
     public SpriteRenderer selectedArtwork;
     public string selectedDescription;
@@ -15,9 +14,10 @@ public class SkinManagerScript : MonoBehaviour
     public int selectedFuel;
     public int selectedSpeed;
     public bool selectedHolding;
-    public int selectedOption = 0;
+    private int selectedOption = 0;
     void Start()
     {   
+        SkinDB = transform.GetComponent<SkinDBScript>();
         if (PlayerPrefs.HasKey("selectedOption"))
         {
             selectedOption = 0;
@@ -33,7 +33,7 @@ public class SkinManagerScript : MonoBehaviour
     {
         selectedOption++;
 
-        if(selectedOption >= skinDB.skinCount)
+        if(selectedOption >= SkinDB.skinCount)
         {
             selectedOption = 0;
         }
@@ -46,7 +46,7 @@ public class SkinManagerScript : MonoBehaviour
         
         if(selectedOption < 0)
         {
-            selectedOption = skinDB.skinCount - 1;
+            selectedOption = SkinDB.skinCount - 1;
         }
         UpdateSkin(selectedOption);
         Save();
@@ -55,7 +55,7 @@ public class SkinManagerScript : MonoBehaviour
     private void UpdateSkin(int selectedOption)
     {
 
-        Skin selectedSkin = skinDB.Getskin(selectedOption);
+        Skin selectedSkin = SkinDB.Getskin(selectedOption);
         
         //selectedArtworkSprite = selectedSkin.artwork;
         //selectedName = selectedSkin.skinName;
@@ -63,7 +63,7 @@ public class SkinManagerScript : MonoBehaviour
         //selectedPrice.text = selectedSkin.price.ToString();
         selectedFuel = selectedSkin.fuel;
         selectedSpeed = selectedSkin.speed;
-        selectedHolding = selectedSkin.holding;
+        //selectedHolding = selectedSkin.holding;
         
     }
 

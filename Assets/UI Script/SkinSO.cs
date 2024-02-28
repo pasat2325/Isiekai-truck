@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-[CreateAssetMenu(fileName = "SkinSO", menuName = "SO/SkinData", order = int.MaxValue)]
+[CreateAssetMenu(fileName = "SkinSO", menuName = "SO/Skin", order = int.MaxValue)]
 public class SkinData : ScriptableObject
 {
     [SerializeField]
@@ -23,20 +22,15 @@ public class SkinData : ScriptableObject
     [SerializeField]   
     protected bool holding;
     
-    public bool GetHolding()
-    {
-        return holding; 
-    }    
-    public void SetHolding()
+    public void setHolding()
     {
         holding = true;
     }
-    public Skin MakeCopy()
+    public Skin makeCopy()
     {   
-        Skin copy = new Skin (skinName,description, artwork, price, fuel, durability, speed, holding);
+        Skin copy = new Skin(skinName,description, artwork, price, fuel, durability, speed, holding);
         return copy;
     }
-
     
 }
 public class Skin: SkinData
