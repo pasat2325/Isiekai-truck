@@ -9,14 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a99119c67df4b2f4e916b252cdf8a5a0, type: 3}
-  m_Name: Ambulance
+  m_Script: {fileID: 11500000, guid: e807a99707cf6cd4cb55da71d82e95ae, type: 3}
+  m_Name: CashDB
   m_EditorClassIdentifier: 
-  skinName: Ambulance
-  description: Go
-  artwork: {fileID: 21300000, guid: ca4a9c89f188b084eade8885797161a9, type: 3}
-  price: 20000
-  fuel: 4
-  durability: 4
-  speed: 4
-  holding: 1
+  cash: 5000
