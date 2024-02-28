@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class CashTextScript : MonoBehaviour
 {
-    public Text cashText;
+    [SerializeField]
+    private Text cashText;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,7 @@ public class CashTextScript : MonoBehaviour
         //현금 금액을 가져옵니다.
         int cashAmount = GetCashAmount();
         //텍스트를 업데이트합니다.
-        cashText.text = cashAmount.ToString();
+        cashText.text = cashAmount.ToString()+"$";
     }
 
     //현금 금액을 가져오는 함수.

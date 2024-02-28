@@ -1,16 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using JetBrains.Annotations;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SkinStatDisplayScript : MonoBehaviour
 {
     [SerializeField]
-    private Skin selectedSkin;
-    
+    private SkinManagerScript skinData;
     [SerializeField]
     private Text skinFuel;
     [SerializeField]
@@ -26,8 +22,8 @@ public class SkinStatDisplayScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        skinFuel.text =  new string('#',selectedSkin.fuel);
-        skinDurability.text =  new string('#',selectedSkin.durability);
-        skinSpeed.text =  new string('#',selectedSkin.speed);
+        skinFuel.text = skinData.selectedFuel.ToString();
+        skinDurability.text =  skinData.selectedFuel.ToString();
+        skinSpeed.text =  skinData.selectedSpeed.ToString();
     }
 }
