@@ -8,6 +8,7 @@ public class SkinDB : ScriptableObject
 {
     [SerializeField]
     private SkinData[] skinDB;
+    [SerializeField]
     private int equippedSkinNumber;
     public int skinCount
     {
@@ -16,7 +17,7 @@ public class SkinDB : ScriptableObject
             return skinDB.Length;
         }
     }
-    public Skin Getskin(int index)
+    public Skin GetSkin(int index)
     {
         return skinDB[index].MakeCopy();
     }

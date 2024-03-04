@@ -19,4 +19,4 @@ MonoBehaviour:
   fuel: 4
   durability: 4
   speed: 4
-  holding: 1
+  holding: 0

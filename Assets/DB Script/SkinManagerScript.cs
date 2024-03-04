@@ -15,17 +15,23 @@ public class SkinManagerScript : MonoBehaviour
     public int selectedFuel;
     public int selectedSpeed;
     public bool selectedHolding;
-    public int selectedOption = 0;
+    public int selectedOption;
+
+    [SerializeField]
+    private Button beforeButton;
+    [SerializeField]
+    private Button nextButton;
+
     void Start()
-    {   
-        if (PlayerPrefs.HasKey("selectedOption"))
-        {
-            selectedOption = 0;
-        }
-        else
-        {
-            Load();
-        }
+    {
+        beforeButton.onClick.AddListener(BeforeOption);
+        nextButton.onClick.AddListener(NextOption);
+
+        Load();
+        UpdateSkin(selectedOption);
+    }
+    void Update()
+    {
         UpdateSkin(selectedOption);
     }
 
@@ -38,7 +44,6 @@ public class SkinManagerScript : MonoBehaviour
             selectedOption = 0;
         }
         UpdateSkin(selectedOption);
-        Save();
     }
     public void BeforeOption()
     {
@@ -49,18 +54,17 @@ public class SkinManagerScript : MonoBehaviour
             selectedOption = skinDB.skinCount - 1;
         }
         UpdateSkin(selectedOption);
-        Save();
     }
 
     private void UpdateSkin(int selectedOption)
     {
 
-        Skin selectedSkin = skinDB.Getskin(selectedOption);
+        Skin selectedSkin = skinDB.GetSkin(selectedOption);
         
         //selectedArtworkSprite = selectedSkin.artwork;
         //selectedName = selectedSkin.skinName;
         //selectedDescription.text = selectedSkin.description;
-        //selectedPrice.text = selectedSkin.price.ToString();
+        selectedPrice = selectedSkin.price;
         selectedFuel = selectedSkin.fuel;
         selectedSpeed = selectedSkin.speed;
         selectedHolding = selectedSkin.holding;
@@ -69,16 +73,7 @@ public class SkinManagerScript : MonoBehaviour
 
     private void Load()
     {
-        selectedOption = PlayerPrefs.GetInt("selectedOption");
-    }
-    private void Save()
-    {
-        PlayerPrefs.SetInt("selectedOption",selectedOption);
-    }
-
-    public static implicit operator Text(SkinManagerScript v)
-    {
-        throw new NotImplementedException();
+        selectedOption = skinDB.GetEquipped();
     }
 
 

@@ -15,7 +15,7 @@ public class CashDB : ScriptableObject
     }
     public void SetCash(int index)
     {
-        cash += index;
+        cash = index;
     }
     
 }

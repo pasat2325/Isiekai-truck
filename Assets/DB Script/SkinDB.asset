@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SkinDB
   m_EditorClassIdentifier: 
   skinDB:
-  - {fileID: 11400000, guid: 38c0c485cbc16774896e5749ef5228cf, type: 2}
   - {fileID: 11400000, guid: ba9f78e87015bf64493f361faceb2ac3, type: 2}
   - {fileID: 11400000, guid: c136c80e9f35b9047aa2801788b240c5, type: 2}
+  - {fileID: 11400000, guid: 38c0c485cbc16774896e5749ef5228cf, type: 2}
+  equippedSkinNumber: 1
