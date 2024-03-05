@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e807a99707cf6cd4cb55da71d82e95ae, type: 3}
   m_Name: CashDB
   m_EditorClassIdentifier: 
-  cash: 5000
+  cash: 879980
