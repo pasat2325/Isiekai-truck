@@ -4,22 +4,21 @@ using UnityEngine;
 
 public class Road : MonoBehaviour
 {
-    public float moveSpeed= 50f;
+    public float timeAlive;
     // Start is called before the first frame update
     void Start()
     {
-        
+       // Invoke("SelfDestruct", timeAlive);
     }
 
     // Update is called once per frame
     void Update()
     {
-         transform.position += new Vector3(0, 0, -moveSpeed) * Time.deltaTime;
+         
     }
 
-    private void OnTriggerEnter(Collider other){
-        if(other.gameObject.CompareTag("Destroy")){
-            Destroy(gameObject);
-        }
+    private void SelfDestruct()
+    {
+        Destroy(gameObject);
     }
 }

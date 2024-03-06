@@ -5,11 +5,9 @@ using UnityEngine;
 public class Swipe_Controls : MonoBehaviour
 {
     public float laneWidth = 15f;
-
-
     public float moveSpeed = 5f;
-
     private int currentLane = 2;
+    public Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +18,8 @@ public class Swipe_Controls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        rb.velocity = new Vector3(0, 0, moveSpeed);
+
         if(Input.GetKeyDown(KeyCode.RightArrow) && currentLane < 3 ){
             currentLane++;
             MoveToLane(currentLane);
