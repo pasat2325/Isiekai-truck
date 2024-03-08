@@ -11,6 +11,8 @@ public class Swipe_Controls : MonoBehaviour
     public Rigidbody rb;
     public float laneChangeSpeed = 2f; // 차선 변경 속도
 
+    public SpawnManager spawnManager;
+
     void Start()
     {
         // 초기 목표 X 위치 설정
@@ -40,5 +42,10 @@ public class Swipe_Controls : MonoBehaviour
             currentLane--;
             targetPositionX = (currentLane - 1.5f) * laneWidth;
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        spawnManager.SpawnTriggerEntered();
     }
 }
