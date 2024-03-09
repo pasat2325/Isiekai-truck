@@ -46,6 +46,6 @@ public class Swipe_Controls : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        spawnManager.SpawnTriggerEntered();
+        //spawnManager.SpawnTriggerEntered();
     }
 }

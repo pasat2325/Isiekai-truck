@@ -16,7 +16,7 @@ public class NewSectionTrigger : MonoBehaviour
         {
             roadClone = Instantiate(roadSection,new Vector3(0,0,loc * loc_multiplier), Quaternion.Euler(new Vector3(0, 270, 0)));
             loc_multiplier++;
-            Destroy(roadClone,10);
+            Destroy(roadClone,20);
         }
     }
 }
