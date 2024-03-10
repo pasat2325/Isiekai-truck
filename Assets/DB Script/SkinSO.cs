@@ -11,7 +11,7 @@ public class SkinData : ScriptableObject
     [SerializeField]
     protected string description;  
     [SerializeField] 
-    protected Sprite artwork;  
+    protected Mesh artwork;  
     [SerializeField]
     protected int price;
     [SerializeField]   
@@ -43,14 +43,14 @@ public class Skin: SkinData
 {
     public new string skinName ;
     public new string description ;
-    public new Sprite artwork ;
+    public new Mesh artwork ;
     public new int price;
     public new int fuel;
     public new int durability;
     public new int speed; 
     public new bool holding;
     
-    public Skin(string skinName, string description, Sprite artwork, int price, int fuel, int durability, int speed, bool holding)
+    public Skin(string skinName, string description, Mesh artwork, int price, int fuel, int durability, int speed, bool holding)
     {
         this.skinName = skinName;
         this.description = description;

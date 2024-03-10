@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skinName: Ambulance
   description: Go
-  artwork: {fileID: 21300000, guid: ca4a9c89f188b084eade8885797161a9, type: 3}
+  artwork: {fileID: 4300008, guid: 1acbee872179ec040aac4503ec160fd9, type: 3}
   price: 20000
   fuel: 4
   durability: 4
