@@ -11,7 +11,7 @@ public class SkinData : ScriptableObject
     [SerializeField]
     protected string description;  
     [SerializeField] 
-    protected Mesh artwork;  
+    protected GameObject artwork;  
     [SerializeField]
     protected int price;
     [SerializeField]   

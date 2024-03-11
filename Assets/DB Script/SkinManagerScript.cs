@@ -9,7 +9,7 @@ public class SkinManagerScript : MonoBehaviour
     [SerializeField]
     private SkinDB skinDB;
     public string selectedName;
-    public SpriteRenderer selectedArtwork;
+    public GameObject selectedArtwork;
     public string selectedDescription;
     public int selectedPrice;
     public int selectedFuel;
