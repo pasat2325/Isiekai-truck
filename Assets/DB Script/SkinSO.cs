@@ -43,14 +43,14 @@ public class Skin: SkinData
 {
     public new string skinName ;
     public new string description ;
-    public new Mesh artwork ;
+    public new GameObject artwork ;
     public new int price;
     public new int fuel;
     public new int durability;
     public new int speed; 
     public new bool holding;
     
-    public Skin(string skinName, string description, Mesh artwork, int price, int fuel, int durability, int speed, bool holding)
+    public Skin(string skinName, string description, GameObject artwork, int price, int fuel, int durability, int speed, bool holding)
     {
         this.skinName = skinName;
         this.description = description;
