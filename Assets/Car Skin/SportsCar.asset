@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skinName: SportsCar
   description: This is so fast
-  artwork: {fileID: 21300000, guid: d8e696796260a2e468ed613979ab196f, type: 3}
+  artwork: {fileID: 4300000, guid: 62742ca8cd0c30a44b9301b3fae00884, type: 3}
   price: 5000
   fuel: 2
   durability: 1
