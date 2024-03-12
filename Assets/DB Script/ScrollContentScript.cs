@@ -6,13 +6,21 @@ using UnityEngine;
 public class ScrollContentScript : MonoBehaviour
 {
     [SerializeField]
-    SkinManagerScript skinManager;
-
+    private SkinDB skinDB;
+    [SerializeField]
+    private GameObject skinPrefab;
+    [SerializeField]
+    private GameObject parent;
     
+
     // Start is called before the first frame update
     void Start()
     {
-
+        int skinCount = skinDB.skinCount;
+        for (int i = 0; i < skinCount; i++) {
+            Instantiate(skinPrefab, parent.transform);
+            
+        }
     }
 
 

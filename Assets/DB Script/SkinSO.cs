@@ -11,7 +11,7 @@ public class SkinData : ScriptableObject
     [SerializeField]
     protected string description;  
     [SerializeField] 
-    protected Mesh artwork;  
+    protected GameObject artwork;  
     [SerializeField]
     protected int price;
     [SerializeField]   
@@ -33,7 +33,15 @@ public class SkinData : ScriptableObject
     }
     public Skin MakeCopy()
     {   
-        Skin copy = new Skin (skinName,description, artwork, price, fuel, durability, speed, holding);
+        Skin copy = ScriptableObject.CreateInstance<Skin>();
+        copy.skinName = skinName;
+        copy.description = description;
+        copy.artwork = artwork;
+        copy.price = price;
+        copy.fuel = fuel;
+        copy.durability = durability;
+        copy.speed = speed;
+        copy.holding =holding;
         return copy;
     }
 
