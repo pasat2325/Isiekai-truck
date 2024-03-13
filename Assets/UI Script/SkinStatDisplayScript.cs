@@ -13,6 +13,7 @@ public class SkinStatDisplayScript : MonoBehaviour
     private Text skinDurability;
     [SerializeField]
     private Text skinSpeed;
+    [SerializeField] private Text skinName;
 
     // Start is called before the first frame update
     void Start()
@@ -25,5 +26,6 @@ public class SkinStatDisplayScript : MonoBehaviour
         skinFuel.text = skinData.selectedFuel.ToString();
         skinDurability.text =  skinData.selectedFuel.ToString();
         skinSpeed.text =  skinData.selectedSpeed.ToString();
+        skinName.text = skinData.selectedName;
     }
 }

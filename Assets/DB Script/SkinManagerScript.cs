@@ -62,7 +62,7 @@ public class SkinManagerScript : MonoBehaviour
         Skin selectedSkin = skinDB.GetSkin(selectedOption);
         
         //selectedArtworkSprite = selectedSkin.artwork;
-        //selectedName = selectedSkin.skinName;
+        selectedName = selectedSkin.skinName;
         //selectedDescription.text = selectedSkin.description;
         selectedPrice = selectedSkin.price;
         selectedFuel = selectedSkin.fuel;
