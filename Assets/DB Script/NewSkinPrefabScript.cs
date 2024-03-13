@@ -19,7 +19,10 @@ public class NewSkinPrefabScript : MonoBehaviour
     [SerializeField]
     private GameObject parent;
 
-
+    public void skinNumberChange(int i)
+    {
+        skinNumber = i;
+    }
     
     // Start is called before the first frame update
     void Start()

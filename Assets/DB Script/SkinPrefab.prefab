@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skinDB: {fileID: 11400000, guid: 82fca0f39568f2542ba95271a45c4542, type: 2}
-  skinNumber: 1
+  skinNumber: 0
   thisArtwork: {fileID: 7000899187552125681}
   thisHolding: 0
   parent: {fileID: 4172286980535465415}

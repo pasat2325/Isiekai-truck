@@ -13,12 +13,18 @@ public class ScrollContentScript : MonoBehaviour
     private GameObject parent;
     
 
+    
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         int skinCount = skinDB.skinCount;
-        for (int i = 0; i < skinCount; i++) {
-            Instantiate(skinPrefab, parent.transform);
+
+        for (int i = 0; i < skinCount; i++) {   
+            NewSkinPrefabScript prefabScript = skinPrefab.GetComponent<NewSkinPrefabScript>();
+            prefabScript.skinNumberChange(i);
+            
+            Instantiate(skinPrefab, parent.transform);;
             
         }
     }
