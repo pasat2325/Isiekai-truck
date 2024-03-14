@@ -740,7 +740,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.17364821, y: 0, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: 0, y: 20.9, z: -616}
+  m_LocalPosition: {x: 0, y: 21.4, z: -616}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -953,7 +953,7 @@ Transform:
   m_GameObject: {fileID: 1067887003}
   serializedVersion: 2
   m_LocalRotation: {x: -0.22081433, y: 0.44225106, z: -0.113306694, w: -0.86186814}
-  m_LocalPosition: {x: 0, y: 20.9, z: -616}
+  m_LocalPosition: {x: 0, y: 21.4, z: -616}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1184,11 +1184,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1234199728}
   - component: {fileID: 1234199729}
-  - component: {fileID: 1234199731}
   - component: {fileID: 1234199733}
   - component: {fileID: 1234199734}
   - component: {fileID: 1234199735}
   - component: {fileID: 1234199736}
+  - component: {fileID: 1234199737}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1205,7 +1205,7 @@ Transform:
   m_GameObject: {fileID: 1234199727}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8, y: 0.5, z: -599}
+  m_LocalPosition: {x: 8, y: 1, z: -599}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1229,27 +1229,6 @@ MonoBehaviour:
   roadClone: {fileID: 0}
   loc: 3500
   loc_multiplier: 1
---- !u!65 &1234199731
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1234199727}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 3.5684757, y: 4.1061907, z: 9.489866}
-  m_Center: {x: -0.007786751, y: 2.0018487, z: 0.10405064}
 --- !u!54 &1234199733
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1272,11 +1251,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 116
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &1234199734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1293,7 +1272,6 @@ MonoBehaviour:
   moveSpeed: 50
   rb: {fileID: 1234199733}
   laneChangeSpeed: 5
-  spawnManager: {fileID: 0}
 --- !u!95 &1234199735
 Animator:
   serializedVersion: 5
@@ -1302,7 +1280,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234199727}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 191aaf9becf2d6d48a742b31d0a6a359, type: 2}
   m_CullingMode: 0
@@ -1330,12 +1308,33 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Radius: 2
+  m_Center: {x: 0, y: 2.4, z: 3}
+--- !u!65 &1234199737
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234199727}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 2
-  m_Center: {x: 0, y: 2, z: 3}
+  m_Size: {x: 3, y: 2, z: 7}
+  m_Center: {x: 0, y: 2, z: 1}
 --- !u!1 &1401441178
 GameObject:
   m_ObjectHideFlags: 0
@@ -2320,6 +2319,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 608499595977018397, guid: e6e136ac799727843b0fbe862b24d1b7, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1366237864832817883, guid: e6e136ac799727843b0fbe862b24d1b7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1366237864832817883, guid: e6e136ac799727843b0fbe862b24d1b7, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1613454120439973137, guid: e6e136ac799727843b0fbe862b24d1b7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.5

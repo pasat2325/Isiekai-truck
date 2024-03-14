@@ -11,7 +11,7 @@ public class Swipe_Controls : MonoBehaviour
     public Rigidbody rb;
     public float laneChangeSpeed = 2f; // 차선 변경 속도
 
-    public SpawnManager spawnManager;
+    
 
     void Start()
     {
