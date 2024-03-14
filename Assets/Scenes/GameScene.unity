@@ -1649,9 +1649,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d621c9af42269348a4a32bbe6fd1bf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 4751592477846778783, guid: e6e136ac799727843b0fbe862b24d1b7, type: 3}
+  enemyPrefab1: {fileID: 4751592477846778783, guid: e6e136ac799727843b0fbe862b24d1b7, type: 3}
+  enemyPrefab2: {fileID: 0}
+  enemyPrefab3: {fileID: 0}
+  enemyPrefab4: {fileID: 0}
+  enemyPrefab5: {fileID: 0}
+  enemySpawnInterval: 0.5
+  soldierPrefab1: {fileID: 4751592477846778783, guid: e6e136ac799727843b0fbe862b24d1b7, type: 3}
+  soldierSpawnInterval: 0.5
   player: {fileID: 1234199727}
-  spawnInterval: 0.5
 --- !u!4 &1600997422
 Transform:
   m_ObjectHideFlags: 0

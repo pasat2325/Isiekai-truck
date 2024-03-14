@@ -10,7 +10,7 @@ public class CollisionReaction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("DestroySelf", 20f);
+        Invoke("DestroySelf", 40f);
     }
 
     // Update is called once per frame
