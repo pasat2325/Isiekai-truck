@@ -1455,7 +1455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxFuel: 100
   currentFuel: 0
-  usage: 0.3
+  usage: 0.5
   fuelBar: {fileID: 1814421176}
 --- !u!1 &1401441178
 GameObject:
