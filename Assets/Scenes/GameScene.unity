@@ -1758,8 +1758,8 @@ MonoBehaviour:
   enemyPrefab4: {fileID: 0}
   enemyPrefab5: {fileID: 0}
   enemySpawnInterval: 0.5
-  soldierPrefab1: {fileID: 100000, guid: 52f3bf47c9c62af4588469ff668b805c, type: 3}
-  soldierSpawnInterval: 0.5
+  soldierPrefab1: {fileID: 919132149155446097, guid: 490b59b7205584142852bd705aa9f203, type: 3}
+  soldierSpawnInterval: 3
   player: {fileID: 1234199727}
 --- !u!4 &1600997422
 Transform:
