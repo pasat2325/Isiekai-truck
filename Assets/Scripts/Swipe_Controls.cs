@@ -61,9 +61,4 @@ public class Swipe_Controls : MonoBehaviour
             targetPositionX = (currentLane - 1.5f) * laneWidth;
         }
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        //spawnManager.SpawnTriggerEntered();
-    }
 }
