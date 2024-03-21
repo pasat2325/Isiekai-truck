@@ -30,12 +30,12 @@ public class EnemySpawner : MonoBehaviour
             SpawnEnemy();
             carTimer = 0f; // 타이머 재설정
         }
-        soldierTimer += Time.deltaTime;
+        /*soldierTimer += Time.deltaTime;
         if (soldierTimer > soldierSpawnInterval)
         {
             SpawnSoldier();
             soldierTimer = 0f; // 타이머 재설정
-        }
+        }*/
     }
 
     void SpawnEnemy()
@@ -46,7 +46,7 @@ public class EnemySpawner : MonoBehaviour
         float spawnEnemyZPosition = player.transform.position.z + 500;
 
         // 선택된 위치에 적 생성
-        Vector3 spawnPosition = new Vector3(spawnEnemyXPositions[randomIndex], 0f, spawnEnemyZPosition);
+        Vector3 spawnPosition = new Vector3(spawnEnemyXPositions[randomIndex], 2f, spawnEnemyZPosition);
         Instantiate(enemyPrefab1, spawnPosition, Quaternion.identity);
     }
 
