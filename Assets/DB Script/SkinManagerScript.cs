@@ -1,11 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DanielLochner.Assets.SimpleScrollSnap;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SkinManagerScript : MonoBehaviour
 {
+    [SerializeField] SimpleScrollSnap swipeMenu;
     [SerializeField]
     private SkinDB skinDB;
     public string selectedName;
@@ -24,17 +26,20 @@ public class SkinManagerScript : MonoBehaviour
 
     void Start()
     {
+        /*
         beforeButton.onClick.AddListener(BeforeOption);
         nextButton.onClick.AddListener(NextOption);
-
+        
         Load();
+        */
         UpdateSkin(selectedOption);
     }
     void Update()
     {
+        selectedOption = swipeMenu.SelectedPanel;
         UpdateSkin(selectedOption);
     }
-
+/*
     public void NextOption()
     {
         selectedOption++;
@@ -55,13 +60,11 @@ public class SkinManagerScript : MonoBehaviour
         }
         UpdateSkin(selectedOption);
     }
-
+*/
     private void UpdateSkin(int selectedOption)
     {
 
         Skin selectedSkin = skinDB.GetSkin(selectedOption);
-        
-        //selectedArtworkSprite = selectedSkin.artwork;
         selectedName = selectedSkin.skinName;
         //selectedDescription.text = selectedSkin.description;
         selectedPrice = selectedSkin.price;
@@ -70,11 +73,11 @@ public class SkinManagerScript : MonoBehaviour
         selectedHolding = selectedSkin.holding;
         
     }
-
+/*
     private void Load()
     {
         selectedOption = skinDB.GetEquipped();
     }
 
-
+*/
 }

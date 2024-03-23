@@ -9,7 +9,6 @@ using UnityEngine.UI;
 
 namespace DanielLochner.Assets.SimpleScrollSnap
 {
-
     [AddComponentMenu("UI/Simple Scroll-Snap")]
     [RequireComponent(typeof(ScrollRect))]
     public class SimpleScrollSnap : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerDownHandler, IPointerUpHandler
