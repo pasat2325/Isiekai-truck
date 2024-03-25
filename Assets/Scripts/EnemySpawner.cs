@@ -19,7 +19,7 @@ public class EnemySpawner : MonoBehaviour
     private float soldierTimer = 0f; // 타이머
 
     // 랜덤하게 생성할 x 좌표
-    private float[] spawnEnemyXPositions = new float[] { -26.5f, -11.5f, 3.5f, 18.5f };
+    private float[] spawnEnemyXPositions = new float[] { -22.5f, -7.5f, 7.5f, 22.5f };
 
     void Update()
     {
@@ -30,12 +30,7 @@ public class EnemySpawner : MonoBehaviour
             SpawnEnemy();
             carTimer = 0f; // 타이머 재설정
         }
-        /*soldierTimer += Time.deltaTime;
-        if (soldierTimer > soldierSpawnInterval)
-        {
-            SpawnSoldier();
-            soldierTimer = 0f; // 타이머 재설정
-        }*/
+        
     }
 
     void SpawnEnemy()
@@ -46,18 +41,9 @@ public class EnemySpawner : MonoBehaviour
         float spawnEnemyZPosition = player.transform.position.z + 500;
 
         // 선택된 위치에 적 생성
-        Vector3 spawnPosition = new Vector3(spawnEnemyXPositions[randomIndex], 2f, spawnEnemyZPosition);
+        Vector3 spawnPosition = new Vector3(spawnEnemyXPositions[randomIndex], 0f, spawnEnemyZPosition);
         Instantiate(enemyPrefab1, spawnPosition, Quaternion.identity);
     }
 
-    void SpawnSoldier()
-    {
-        int randomIndex = Random.Range(0, spawnEnemyXPositions.Length);
-        // 플레이어 z 위치에 470을 더한 위치 계산
-        float spawnSoldierZPosition = player.transform.position.z + 470;
-
-        // 선택된 위치에 용사 생성
-        Vector3 spawnPosition = new Vector3(spawnEnemyXPositions[randomIndex], 0f, spawnSoldierZPosition);
-        Instantiate(soldierPrefab1, spawnPosition, Quaternion.identity);
-    }
+    
 }
