@@ -1408,9 +1408,9 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Radius: 2
   m_Center: {x: 0, y: 2.4, z: 3}
@@ -1429,7 +1429,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2511,9 +2511,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1724564768812519084, guid: e6e136ac799727843b0fbe862b24d1b7, type: 3}
+      propertyPath: m_Mass
+      value: 0.0000001
+      objectReference: {fileID: 0}
     - target: {fileID: 4751592477846778783, guid: e6e136ac799727843b0fbe862b24d1b7, type: 3}
       propertyPath: m_Name
       value: EnemyCar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989136524926063235, guid: e6e136ac799727843b0fbe862b24d1b7, type: 3}
+      propertyPath: maximum_speed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989136524926063235, guid: e6e136ac799727843b0fbe862b24d1b7, type: 3}
+      propertyPath: minimum_speed
+      value: -70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
