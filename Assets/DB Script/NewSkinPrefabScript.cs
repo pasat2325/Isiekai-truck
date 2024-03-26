@@ -19,6 +19,11 @@ public class NewSkinPrefabScript : MonoBehaviour
     [SerializeField]
     private GameObject parent;
 
+    private bool skinPurchase;
+
+    [SerializeField]
+    private GameObject lockImage;
+
     public void skinNumberChange(int i)
     {
         skinNumber = i;
@@ -36,12 +41,27 @@ public class NewSkinPrefabScript : MonoBehaviour
         thisArtwork.transform.localScale = new Vector3(xscale, yscale, zscale);
         Instantiate(thisArtwork, parent.transform);
         thisHolding = thisSkin.holding;
+        if (thisHolding == true)
+        {
+            DeleteLock();
+        }
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Skin thisSkin = skinDB.GetSkin(skinNumber);
+        skinPurchase = thisSkin.holding;
+        if (skinPurchase == true && thisHolding == false) 
+        {
+            thisHolding = true;
+            DeleteLock();
+        }
+    }
+
+    void DeleteLock()
+    {
+        lockImage.SetActive(false);
     }
 }
