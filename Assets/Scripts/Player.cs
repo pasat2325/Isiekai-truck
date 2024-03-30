@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public int damage = 1000; // 충돌 데미지
     public float maxFuel = 100f;
     public float currentFuel;
 
@@ -21,6 +22,23 @@ public class Player : MonoBehaviour
     void Update()
     {
         currentFuel -= usage;
+        fuelBar.SetFuel(currentFuel);
+        
+    }
+
+    
+    // Player 가 EnemyCar와 충돌 시 Damage 입음(연료 소비)
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("EnemyCar"))
+        {
+            TakeDamage(damage);
+        }
+    }
+    public void TakeDamage(int damage)  
+    {
+        currentFuel -= damage;
         fuelBar.SetFuel(currentFuel);
     }
 }
