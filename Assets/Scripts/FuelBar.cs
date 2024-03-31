@@ -4,16 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 public class FuelBar : MonoBehaviour
 {
-    public Slider slider;
+    public Slider fuelSlider;
 
     public void SetMaxFuel (float fuel)
     {
-        slider.maxValue = fuel;
-        slider.value = fuel;
+        fuelSlider.maxValue = fuel;
+        fuelSlider.value = fuel;
     }
     public void SetFuel(float fuel)
     {
-        slider.value = fuel;
+        fuelSlider.value = fuel;
     }
    
 }
