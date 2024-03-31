@@ -16,7 +16,7 @@ public class CollisionReaction : MonoBehaviour
 
     }
 
-    // OnTriggerEnter ÇÔ¼ö ¼öÁ¤
+    // OnTriggerEnter ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
