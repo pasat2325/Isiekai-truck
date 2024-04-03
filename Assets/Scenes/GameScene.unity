@@ -1383,7 +1383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laneWidth: 15
-  moveSpeed: 50
+  moveSpeed: 100
   rb: {fileID: 1234199733}
   laneChangeSpeed: 5
 --- !u!135 &1234199736
@@ -1403,7 +1403,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 2
   m_Center: {x: 0, y: 2.4, z: 3}
@@ -2109,7 +2109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53bf094c44ac3c34f9a36a36d5657f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carSpeed: 50
+  carSpeed: 100
   rb: {fileID: 1928654659}
 --- !u!54 &1928654659
 Rigidbody:
@@ -2669,11 +2669,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8989136524926063235, guid: e6e136ac799727843b0fbe862b24d1b7, type: 3}
       propertyPath: maximum_speed
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8989136524926063235, guid: e6e136ac799727843b0fbe862b24d1b7, type: 3}
       propertyPath: minimum_speed
-      value: -70
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

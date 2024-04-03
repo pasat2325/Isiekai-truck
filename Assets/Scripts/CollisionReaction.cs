@@ -16,13 +16,13 @@ public class CollisionReaction : MonoBehaviour
 
     }
 
-    // OnTriggerEnter �Լ� ����
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            rb.AddForce(new Vector3(200, 300, 300), ForceMode.Impulse);
-            rb.AddTorque(transform.forward * 30f, ForceMode.Impulse);
+            rb.AddForce(new Vector3(50f, 30f, 200f), ForceMode.Impulse);
+            rb.AddTorque(transform.forward * 100f, ForceMode.Impulse);
         }
     }
 
