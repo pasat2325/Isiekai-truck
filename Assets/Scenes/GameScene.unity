@@ -581,14 +581,14 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.5
+  m_Color: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 0}
+  m_Intensity: 1.8
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -614,7 +614,7 @@ Light:
       e33: 1
     m_UseCullingMatrixOverride: 0
   m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
+  m_DrawHalo: 1
   m_Flare: {fileID: 0}
   m_RenderMode: 1
   m_CullingMask:
@@ -624,7 +624,7 @@ Light:
   m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 2
+  m_BounceIntensity: 5
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -1324,7 +1324,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 709004391}
-  - {fileID: 1928654660}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1234199729
@@ -1385,7 +1384,8 @@ MonoBehaviour:
   laneWidth: 15
   moveSpeed: 100
   rb: {fileID: 1234199733}
-  laneChangeSpeed: 5
+  laneChangeSpeed: 4
+  isSmashed: 0
 --- !u!135 &1234199736
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1486,7 +1486,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 500}
+  m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1401441180
 MonoBehaviour:
@@ -1956,7 +1956,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 500}
+  m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1879741874
 MonoBehaviour:
@@ -2109,8 +2109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53bf094c44ac3c34f9a36a36d5657f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carSpeed: 100
-  rb: {fileID: 1928654659}
+  playerTransform: {fileID: 1234199728}
 --- !u!54 &1928654659
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2136,7 +2135,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 124
   m_CollisionDetection: 0
 --- !u!4 &1928654660
 Transform:
@@ -2147,11 +2146,11 @@ Transform:
   m_GameObject: {fileID: 1928654657}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4, y: 0, z: 0.5}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 0, y: 1, z: -598}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1234199728}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2022871067
 GameObject:
@@ -2614,6 +2613,10 @@ PrefabInstance:
     - target: {fileID: 1366237864832817883, guid: e6e136ac799727843b0fbe862b24d1b7, type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483483172836803589, guid: e6e136ac799727843b0fbe862b24d1b7, type: 3}
+      propertyPath: pushForce
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 1613454120439973137, guid: e6e136ac799727843b0fbe862b24d1b7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4742,6 +4745,7 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 963194228}
   - {fileID: 5852485531590608266}
+  - {fileID: 1928654660}
   - {fileID: 1234199728}
   - {fileID: 1067887007}
   - {fileID: 1310384158105139083}
