@@ -5,29 +5,55 @@ using UnityEngine;
 public class Swipe_Controls : MonoBehaviour
 {
     public float laneWidth = 16f; // 차선 변경시 이동거리
-    public float moveSpeed = 15f; // 전진속도
+    public float moveSpeed; // 전진속도
     private int currentLane = 2; // 출발차선
     private float targetPositionX; // 목표 X 위치
     public Rigidbody rb;
     public float laneChangeSpeed = 2f; // 차선 변경 속도
 
-    
+    public bool isSmashed = false;
+    private float originalMoveSpeed; // 원래 moveSpeed 값을 저장할 필드
+    public float reflex_force;
+    public bool isRestoring = false;
 
     void Start()
     {
         // 초기 목표 X 위치 설정
         targetPositionX = rb.position.x;
+        originalMoveSpeed = moveSpeed;
     }
 
     void FixedUpdate()
     {
-        // 전진 속도 유지
-        Vector3 forwardMove = new Vector3(0, 0, moveSpeed * Time.fixedDeltaTime);
-        // 현재 X 위치에서 목표 X 위치로 부드럽게 이동
-        float newX = Mathf.Lerp(rb.position.x, targetPositionX, laneChangeSpeed * Time.fixedDeltaTime);
-        Vector3 newPosition = new Vector3(newX, rb.position.y, rb.position.z) + forwardMove;
-        rb.MovePosition(newPosition);
+        
+            // 전진 속도 설정
+            Vector3 forwardMove = new Vector3(0, 0, moveSpeed);
+            float targetVelocityX = (targetPositionX - rb.position.x) * laneChangeSpeed;
+            Vector3 newVelocity = new Vector3(targetVelocityX, rb.velocity.y, forwardMove.z);
+            rb.velocity = newVelocity; //is not smashed
+        
+        
     }
+
+    private IEnumerator RestoreSpeed()
+    {
+        isRestoring = true;
+        moveSpeed = 0;
+        
+        float elapsed = 0; // 경과 시간을 추적하는 변수
+        float duration = 5f; // 속도를 복원하는 데 걸리는 시간 (5초)
+
+        while (elapsed < duration)
+        {
+            // 경과 시간에 따라 moveSpeed를 0에서 originalMoveSpeed까지 서서히 증가
+            moveSpeed = Mathf.Lerp(0, originalMoveSpeed, elapsed / duration);
+            elapsed += Time.deltaTime; // 매 프레임마다 경과 시간 업데이트
+            yield return null; // 다음 프레임까지 대기
+        }
+
+        isRestoring = false;
+    }
+
 
     void Update()
     {
@@ -61,4 +87,21 @@ public class Swipe_Controls : MonoBehaviour
             targetPositionX = (currentLane - 1.5f) * laneWidth;
         }
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("EnemyCar"))
+        {
+            if (!isRestoring) 
+            {
+                isSmashed = true;
+                rb.AddForce(new Vector3(0, 0, -reflex_force));
+                StartCoroutine(RestoreSpeed());
+            }
+            
+            
+        }
+
+    }
+
 }
