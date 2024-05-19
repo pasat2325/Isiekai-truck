@@ -180,6 +180,58 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87dd20b8aafab4a4b913fd0795feb860, type: 3}
+--- !u!1 &170005129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 170005131}
+  - component: {fileID: 170005130}
+  m_Layer: 0
+  m_Name: yuusha spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &170005130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170005129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 431a009e16b938848b57d3fdd4a1343a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  YuushaOriginal: {fileID: 6493490212445736595, guid: c00a68adb9eb8c840922359bdafdf205, type: 3}
+  rb: {fileID: 8792168011280318140, guid: c00a68adb9eb8c840922359bdafdf205, type: 3}
+  Player: {fileID: 1234199727}
+  YuushaTimer: 0
+  YuushaSpawnInterval: 0
+  MovingDirection: 0
+  MovingSpeed: 0
+--- !u!4 &170005131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170005129}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.734797, y: 15.3663435, z: -18.044683}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1357988965}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &416855101
 GameObject:
   m_ObjectHideFlags: 0
@@ -1386,6 +1438,8 @@ MonoBehaviour:
   rb: {fileID: 1234199733}
   laneChangeSpeed: 4
   isSmashed: 0
+  reflex_force: 0
+  isRestoring: 0
 --- !u!135 &1234199736
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1448,6 +1502,11 @@ MonoBehaviour:
   healthBar: {fileID: 1910453534}
   damage: 10
   usage: 0.5
+--- !u!4 &1357988965 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4162539649370691397, guid: c00a68adb9eb8c840922359bdafdf205, type: 3}
+  m_PrefabInstance: {fileID: 1257136947491116666}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1401441178
 GameObject:
   m_ObjectHideFlags: 0
@@ -2594,6 +2653,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e6b95ba82669f14c9fb8f4a38d439de, type: 3}
+--- !u!1001 &1257136947491116666
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 170005131}
+    m_Modifications:
+    - target: {fileID: 4162539649370691397, guid: c00a68adb9eb8c840922359bdafdf205, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.734797
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162539649370691397, guid: c00a68adb9eb8c840922359bdafdf205, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10.3663435
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162539649370691397, guid: c00a68adb9eb8c840922359bdafdf205, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18.044683
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162539649370691397, guid: c00a68adb9eb8c840922359bdafdf205, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162539649370691397, guid: c00a68adb9eb8c840922359bdafdf205, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162539649370691397, guid: c00a68adb9eb8c840922359bdafdf205, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162539649370691397, guid: c00a68adb9eb8c840922359bdafdf205, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162539649370691397, guid: c00a68adb9eb8c840922359bdafdf205, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162539649370691397, guid: c00a68adb9eb8c840922359bdafdf205, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162539649370691397, guid: c00a68adb9eb8c840922359bdafdf205, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493490212445736595, guid: c00a68adb9eb8c840922359bdafdf205, type: 3}
+      propertyPath: m_Name
+      value: yuusha
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c00a68adb9eb8c840922359bdafdf205, type: 3}
 --- !u!1001 &1310384158105139083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4752,3 +4868,4 @@ SceneRoots:
   - {fileID: 1600997422}
   - {fileID: 98759991}
   - {fileID: 1746704650}
+  - {fileID: 170005131}
