@@ -37,6 +37,10 @@ public class CollisionReaction : MonoBehaviour
                 rb.AddForce(collisionDirection * pushForce, ForceMode.Impulse);
             }
         }
+        if (other.gameObject.CompareTag("Yuusha"))
+        {
+            rb.velocity = new Vector3(0, 0, 0);
+        }
     }
 
     private void DestroySelf()
