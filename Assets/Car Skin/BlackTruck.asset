@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a99119c67df4b2f4e916b252cdf8a5a0, type: 3}
+  m_Name: BlackTruck
+  m_EditorClassIdentifier: 
+  skinName: BlackTruck
+  description: It's black
+  artwork: {fileID: 1330486331330593521, guid: 3283f6e27903aad4a956b99326a0dfc7, type: 3}
+  price: 50000
+  fuel: 2
+  durability: 5
+  speed: 3
+  holding: 0
