@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 608499595977018397}
   - component: {fileID: 8989136524926063235}
   - component: {fileID: 82328159902220651}
+  - component: {fileID: -3639796276640219655}
   m_Layer: 0
   m_Name: EnemyCar
   m_TagString: EnemyCar
@@ -137,6 +138,27 @@ CapsuleCollider:
   m_Height: 9.199305
   m_Direction: 2
   m_Center: {x: 0, y: 1.4446785, z: 0}
+--- !u!135 &-3639796276640219655
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4751592477846778783}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 3
+  m_Center: {x: 0, y: 1, z: 7}
 --- !u!1 &5128522904377519316
 GameObject:
   m_ObjectHideFlags: 0
