@@ -213,7 +213,7 @@ MonoBehaviour:
   rb: {fileID: 7743430887107225798}
   Player: {fileID: 1234199727}
   YuushaTimer: 0
-  YuushaSpawnInterval: 0
+  YuushaSpawnInterval: 2
   MovingDirection: 0
   MovingSpeed: 0
 --- !u!4 &170005131
@@ -1865,7 +1865,7 @@ MonoBehaviour:
   enemyPrefab3: {fileID: 0}
   enemyPrefab4: {fileID: 0}
   enemyPrefab5: {fileID: 0}
-  enemySpawnInterval: 0.5
+  enemySpawnInterval: 1
   soldierPrefab1: {fileID: 919132149155446097, guid: 490b59b7205584142852bd705aa9f203, type: 3}
   soldierSpawnInterval: 3
   player: {fileID: 1234199727}

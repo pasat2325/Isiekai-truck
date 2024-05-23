@@ -16,7 +16,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject player; // 플레이어 오브젝트
     
     private float carTimer = 0f; // 타이머
-    private float soldierTimer = 0f; // 타이머
+    //private float soldierTimer = 0f; // 타이머
 
     // 랜덤하게 생성할 x 좌표
     private float[] spawnEnemyXPositions = new float[] { -22.5f, -7.5f, 7.5f, 22.5f };

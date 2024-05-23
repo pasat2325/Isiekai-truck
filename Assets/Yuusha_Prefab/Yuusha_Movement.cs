@@ -18,8 +18,9 @@ public class Yuusha_Movement : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider other)
     {
         rb.velocity = new Vector3(0, 0, 0);
+        Debug.Log("yuusha stop");
     }
 }
