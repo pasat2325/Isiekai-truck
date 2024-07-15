@@ -9,7 +9,6 @@ public class Count : MonoBehaviour
     public int targetNumber = 100; // 목표 숫자
     public float startingSpeed = 1f; // 초기 상승 속도
     public float accelerationRate = 0.1f; // 가속도
-
     private int currentNumber = 0; // 현재 숫자
     private float incrementSpeed; // 상승 속도
 
